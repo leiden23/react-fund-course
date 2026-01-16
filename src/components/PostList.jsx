@@ -7,6 +7,13 @@ const PostList = (props) => {
         title,
     } = props
 
+    if (!posts.length) {
+        return (
+            <h1 style={{textAlign: 'center'}}>
+                Посты не найдены
+            </h1>
+        )
+    }
     return (
         <div>
             <h1 style={{textAlign: 'center'}}>
