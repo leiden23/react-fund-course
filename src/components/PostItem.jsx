@@ -1,5 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import MyButton from './UI/button/MyButton';
 const PostItem = (props) => {
+
+    // Было const router = useHistory()
+    // Стало const router = useNavigate()
+    // Далее, router.push('/path') меняем на router('/path')
+    // router.replace('/path') меняем на router('/path', { replace: true })
+    // Если вы хотите использовать state, используйте router('/path', { state: { name: 'Xyz' } })
+    
+    const router = useNavigate()
+    console.log(router)
 
     return (
         <div className='post'>
@@ -10,7 +20,13 @@ const PostItem = (props) => {
                 </div>
             </div>
             <div className="post__btns">
-                <MyButton onClick={() => props.remove(props.post)}>Удалить</MyButton>
+
+                <MyButton onClick={() => router(`/posts/${props.post.id}`)}>
+                    Открыть
+                </MyButton>
+                <MyButton onClick={() => props.remove(props.post)}>
+                    Удалить
+                </MyButton>
             </div>
         </div>
     );
