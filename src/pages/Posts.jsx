@@ -5,10 +5,10 @@ import PostForm from '../components/PostForm';
 import PostFilter from '../components/PostFilter';
 import MyModal from '../components/MyModal/MyModal';
 import MyButton from '../components/UI/button/MyButton';
-import { usePosts } from '../components/hooks/usePosts';
+import { usePosts } from '../hooks/usePosts';
 import PostService from '../API/PostService';
 import Loader from '../components/UI/Loader/Loader';
-import { useFetching } from '../components/hooks/useFetching';
+import { useFetching } from '../hooks/useFetching';
 import { getPageCount } from '../utils/pages';
 import Pagination from '../components/UI/pagination/Pagination';
 
