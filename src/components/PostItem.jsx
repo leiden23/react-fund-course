@@ -9,7 +9,6 @@ const PostItem = (props) => {
     // Если вы хотите использовать state, используйте router('/path', { state: { name: 'Xyz' } })
     
     const router = useNavigate()
-    console.log(router)
 
     return (
         <div className='post'>
